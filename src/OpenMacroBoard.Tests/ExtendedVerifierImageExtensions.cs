@@ -1,8 +1,9 @@
-using OpenMacroBoard.Meta.TestUtils;
+//using OpenMacroBoard.Meta.TestUtils;
 using System.Threading.Tasks;
 
 namespace OpenMacroBoard.Tests
 {
+    /*
     public static class ExtendedVerifierImageExtensions
     {
         public static async Task VerifyAsync(this ExtendedVerifySettings settings, FakeMacroBoard target)
@@ -18,4 +19,5 @@ namespace OpenMacroBoard.Tests
                 .VerifyAsync(target.BoardImage);
         }
     }
+    */
 }

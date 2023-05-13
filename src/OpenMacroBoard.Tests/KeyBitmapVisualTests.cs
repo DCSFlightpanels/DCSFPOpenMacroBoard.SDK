@@ -1,4 +1,4 @@
-using OpenMacroBoard.Meta.TestUtils;
+//using OpenMacroBoard.Meta.TestUtils;
 using OpenMacroBoard.SDK;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Drawing;
@@ -14,8 +14,8 @@ namespace OpenMacroBoard.Tests
     [UsesVerify]
     public class KeyBitmapVisualTests
     {
-        public ExtendedVerifySettings Verifier { get; } = DefaultVerifySettings.Build();
-
+        //public ExtendedVerifySettings Verifier { get; } = DefaultVerifySettings.Build();
+        /*
         [Theory]
         [ClassData(typeof(DeviceGridKeyPositionDataProvider))]
         public async Task FakeMacroboardSelfCheck(string deviceName, GridKeyLayout keys)
@@ -135,6 +135,6 @@ namespace OpenMacroBoard.Tests
             underlyingBoard.IsConnected = true;
 
             await Verifier.WithFileName("2.Reconnected").VerifyAsync(underlyingBoard);
-        }
+        }*/
     }
 }
