@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OpenMacroBoard.SDK": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "NuGetDirectory": "C:\\dev\\GitHub\\Local NuGets"
+      }
+    }
+  }
+}
