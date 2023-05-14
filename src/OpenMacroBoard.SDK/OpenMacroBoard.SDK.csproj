@@ -1,28 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net461;net5.0</TargetFrameworks>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
     <LangVersion>9.0</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <!-- nuget stuff -->
   <PropertyGroup>
-    <Version>4.0.0-preview</Version>
+    <Version>5.0.0</Version>
     <Title>OpenMacroBoard.SDK</Title>
     <Description>Abstraction for macro boards (with LCD keys)</Description>
-    <RepositoryUrl>https://github.com/OpenMacroBoard/OpenMacroBoard.SDK</RepositoryUrl>    
+    <RepositoryUrl>https://github.com/DCSFlightpanels/DCSOpenMacroBoard.SDK</RepositoryUrl>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackAsTool>False</PackAsTool>
+    <PackageOutputPath>$(NuGetDirectory)</PackageOutputPath>    
   </PropertyGroup>
   
-  <Import Project="..\..\..\package-defaults.targets" />
-  <Import Project="..\..\..\analyzers.targets" />
-
   <ItemGroup>
-    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.0" />
-    <None Include="icon.png" Pack="true" PackagePath=""/>
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.0.1" />
+    <None Include="icon.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net5.0'">
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0-windows'">
     <DefineConstants>$(DefineConstants);SUPPORTS_HASHCODE</DefineConstants>
   </PropertyGroup>
 

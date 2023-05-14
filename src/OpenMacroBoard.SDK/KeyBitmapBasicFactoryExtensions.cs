@@ -1,7 +1,10 @@
 using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using SixLabors.ImageSharp.Formats;
+using SixLabors.ImageSharp.Formats.Bmp;
 
 namespace OpenMacroBoard.SDK
 {
@@ -44,6 +47,7 @@ namespace OpenMacroBoard.SDK
         /// </summary>
         public static KeyBitmap FromStream(this IKeyBitmapFactory builder, Stream bitmapStream)
         {
+            bitmapStream.Position = 0;
             return builder.FromImageSharpImage(Image.Load(bitmapStream));
         }
 
@@ -52,6 +56,7 @@ namespace OpenMacroBoard.SDK
         /// </summary>
         public static async Task<KeyBitmap> FromStreamAsync(this IKeyBitmapFactory builder, Stream bitmapStream)
         {
+            bitmapStream.Position = 0;
             return builder.FromImageSharpImage(await Image.LoadAsync(bitmapStream));
         }
 
